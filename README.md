@@ -11,7 +11,7 @@ This is test example to show how works Knowledge base. Every time we select name
 | server | service that holds knowledge service|
 |server/app.mjs| web server entry point|
 | server/config.mjs | web server configuration |
-| server/routes.mjs | endpoints for web service|
+| server/routes.mjs | endpoints for web service, main logic is here |
 | server/db.mjs | knowledge base persistence |
 |server/data/db.json | knowledge base in JSON format|
 |client|client side app|
@@ -35,7 +35,7 @@ Example:
 We have Jim, Jim Beam and Jim The Great. 
 We entered *Jim* and choose name Jim Beam, it trust level will be *increased*, 
 but names Jim and Jim The Great will be *decreased* 
-(because they started with entered name Jim and was declined). 
+(because they started with entered name Jim and was declined. Service will receive *Jim Beam* as selected option, and *Jim* as declined, all names that starts with Jim except selected, will be decreased by trustLevelStep). 
 ```
 Adding new names **won't trigger** other records trust level decrease.
 
@@ -47,10 +47,11 @@ To start demo, install Node.js. Then in terminal switch to server folder and sta
 cd ./server
 node app.mjs
 ```
-Server will be started at http://localhost:3333 . Port can be changed in `server/config.mjs`  
+Server will be started at http://localhost:3333 . Port can be changed in `server/config.mjs` (if port has been changed, it should be updated in client/client.js as well)
 After server is started open client `client/index.html` in browser.
 
 Entering name in input will display matching names in knowledge base ordered by trust level. Pressing Add Name or selecting name from list will update knowledge base.
+On the right side displayed full database content in alphabetical order for easier debugging.
 
 To stop web server press `CTRL+C` in terminal
 
