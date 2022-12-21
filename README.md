@@ -62,5 +62,11 @@ After server is started open client `client/index.html` in browser.
 To stop web server press `CTRL+C` in terminal
 
 
+## Possible improvements
 
+Client interface can be improved by adding DB managment tools like:
+* erasing DB
+* setting custom parameters for trust level - defaul value, changing step, minimal threshold
+* currently to simplify interface, when you select the name, rest names in the list decreases its trust level. Trust level decreasing logic can be improved by custom action buttons or more intelligent decreasing way
+* suggestions block can be implemented as fully functional autocomplete widget.
 
