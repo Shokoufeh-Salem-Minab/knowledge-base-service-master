@@ -35,7 +35,9 @@ Example:
 We have Jim, Jim Beam and Jim The Great. 
 We entered *Jim* and choose name Jim Beam, it trust level will be *increased*, 
 but names Jim and Jim The Great will be *decreased* 
-(because they started with entered name Jim and was declined. Service will receive *Jim Beam* as selected option, and *Jim* as declined, all names that starts with Jim except selected, will be decreased by trustLevelStep). 
+(because they started with entered name Jim and was declined. 
+Service will receive *Jim Beam* as selected option, and *Jim* as declined, 
+all names that starts with Jim except selected, will be decreased by trustLevelStep). 
 ```
 Adding new names **won't trigger** other records trust level decrease.
 
