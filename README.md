@@ -44,7 +44,9 @@ Adding new names **won't trigger** other records trust level decrease.
 
 ## Interface
 
-Interface consists of two zones. Left one is actual service. It contains input zone, where you can write the name. Every time you enter or delete character, service will suggest best options from knowledge base (on the right will be shown current trust level). You can either select name from list or press `Add Name` to add new one. When you select existing name service will **increase** its trust level and **decrease** trust level of other names in the suggestion list. If it is new name, it will be added in DB with **default trust level**, other names trust level won't be changed.   
+Interface consists of two zones. Left one is actual service. It contains input zone, where you can write the name. Every time you enter or delete character, service will suggest best options from knowledge base (on the right will be shown current trust level).  
+You can either select name from list or press `Add Name` to add new one. When you select existing name service will **increase** its trust level and **decrease** trust level of other names in the suggestion list. If it is new name, it will be added in DB with **default trust level**, other names trust level won't be changed.    
+Every time you update knowledge base on top will be displayed messages for every changed record in DB.  
 On the right side we have full DB entries list with its trust level for easier debugging.
 
 ## Getting started
@@ -54,7 +56,7 @@ To start demo, install Node.js. Then in terminal switch to server folder and sta
 cd ./server
 node app.mjs
 ```
-Server will be started at http://localhost:3333 . Port can be changed in `server/config.mjs` (if port has been changed, it should be updated in client/client.js as well)
+Server will be started at http://localhost:3333 . Port can be changed in `server/config.mjs` (if port has been changed, it should be updated in client/client.js as well)  
 After server is started open client `client/index.html` in browser.
 
 To stop web server press `CTRL+C` in terminal
